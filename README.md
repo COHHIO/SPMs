@@ -14,6 +14,8 @@ SPM_data/Prior
 
 2. Next, in ART, schedule all of your 0700 reports on this year's date range, export to Excel and save them all as-is to the "Current" directory, then do it all again, but on last year's date range, and save those to the "Prior" directory. You don't need to change any file names or anything.
 
+3. Open "get_SPM_data.R" in R Studio and on line 21, you will see there is a variable holding the name of our CoC. You should change this to whatever your CoC's name is in the CoC prompt in ART. It should look very similar to how ours is.
+
 ## Two Important Things
 
 There are two things to be aware of before running the script and expecting greatness: 
