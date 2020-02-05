@@ -4,25 +4,23 @@ Code to help ServicePoint users run and manage their SPM reports
 
 This repository contains all the code you'll need to check that you ran your SPMs correctly, to compare this year to last year, and gives you data frames you can build on to do whatever other data manipulations or visualizations you would like.
 
+## Step 0: To Change the 0701 or Not To Change the 0701?
+
+The "get_SPM_data.R" script expects the Returns to Homelessness report (the 0701) to have one more tab than it does if you download the 0701 as-is from ServicePoint. You can either modify the code to not expect this -OR- you can follow the instructions at the bottom of this page to modify your 0701 ART report. We add an extra tab to break out the PSH from the RRH recurrence rates. If you decide to modify your 0701, please use the instructions at the bottom of the page to modify your 0701. If you decide not to, you should modify the code to look at Sheet 1 instead of Sheet 2 (lines 789 and 883 in the get_SPM_data.R script). 
+
+Once this has been sorted out, you can proceed to the next steps.
+
 ## Steps
 
-1. Upon cloning this repository and creating a project in R Studio, you should create a file directory structure like so:
+1. Upon cloning this repository and creating a project in R Studio, you should create a folder directly in the project called "SPM_data", then two folders under that called "Current" and "Prior".
 
-SPM_data/Current
+2. Next, in ART, schedule all of your 0700 reports on this year's date range, export to Excel and save them all as-is to the "Current" directory, then do it all again, but on last year's date range, and save those to the "Prior" directory. 
 
-SPM_data/Prior
-
-2. Next, in ART, schedule all of your 0700 reports on this year's date range, export to Excel and save them all as-is to the "Current" directory, then do it all again, but on last year's date range, and save those to the "Prior" directory. You don't need to change any file names or anything.
+3. Open each Excel file and click "Enable Editing", then close the file. This is very important, as if you don't do this (at least on my machine) the script will not work when it tries to read the file. If anyone knows how to get around this, please let me know.
 
 3. Open "get_SPM_data.R" in R Studio and on line 21, you will see there is a variable holding the name of our CoC. You should change this to whatever your CoC's name is in the CoC prompt in ART. It should look very similar to how ours is.
 
-## Two Important Things
-
-There are two things to be aware of before running the script and expecting greatness: 
-
-1. There is a point in the script at which you will need to open all of the Excel files and click "Enable Editing". Look for the comment that states when that is. If you know of a way around this, please let me know!
-
-2. The script expects the Returns to Homelessness report (the 0701) to have one more tab than it does if you download the 0701 as-is from ServicePoint. You can either modify the code to not expect this -OR- you can follow the instructions below. We add an extra tab to break out the PSH from the RRH recurrence rates. Please use the instructions below to modify your 0701 in this way or adjust the code to use Sheet 1.
+4. Either modify the 0701 in ART or modify the script. See the next section for details.
 
 ## How to Break Out PSH from RRH in the Recurrence Report (0701)
 
