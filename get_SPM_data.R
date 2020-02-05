@@ -122,6 +122,10 @@ if(file.exists(paste0("SPM_data/Prior/",
 # OPEN ALL YOUR EXCEL FILES AND PRESS ENABLE EDITING BEFORE PROCEEDING
 # Checking that the 0700a was run correctly -CURRENT-----------------------
 
+# change the following to match your CoC name:
+
+CoC_code <- "OH-507: Balance of State"
+
 check_loth_a <- read_xls("SPM_data/Current/0700a.xls",
          sheet = 3,
          range = cell_cols("B2:C9")) %>%
@@ -169,7 +173,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
@@ -206,7 +210,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
@@ -243,7 +247,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(2) != PriorYear |
     ReportEnd - years(3) != Prior2Year
   )
@@ -279,7 +283,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
@@ -316,7 +320,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
@@ -352,7 +356,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
@@ -388,7 +392,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
@@ -485,7 +489,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
@@ -522,7 +526,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
@@ -559,7 +563,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(2) != PriorYear |
     ReportEnd - years(3) != Prior2Year
   )
@@ -595,7 +599,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
@@ -632,7 +636,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
@@ -668,7 +672,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
@@ -704,7 +708,7 @@ if(nrow(
   filter(
     EDA != "-Default Provider-" |
     EffectiveDate != ReportEnd |
-    CoC != "OH-507: Balance of State" |
+    CoC != CoC_code |
     ReportEnd - years(1) != ReportStart |
     ReportStart - years(1) != PriorYear
   )
