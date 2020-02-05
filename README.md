@@ -68,6 +68,6 @@ There are two things to be aware of before running the script and expecting grea
 
 14. Click "Add Sub-Alerter". Check that your Filtered object is "First Proj Type PH" and if not, change it to that. In the Operands field, type "7RRH" and click "Format...". Change the color to Default. For the display text, type "Exits from RRH". Click OK, OK, OK.
 
-15.Save the report.
+15. Save the report.
 
 
