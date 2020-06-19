@@ -16,7 +16,7 @@ library(tidyverse)
 library(lubridate)
 library(readxl)
 
-# change the following to match your CoC name:
+# change the following to match your CoC name: 
 
 CoC_code <- "OH-507: Balance of State"
 
